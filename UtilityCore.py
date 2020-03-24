@@ -5,10 +5,10 @@ from traceback import print_exc
 def getData(filename):
     try:
         # Import relevant modules.
-        from json import loads
+        from json import load
         data = ""
         with open(filename, 'r') as file:
-            data = loads(file)
+            data = load(file)
         return data
     except FileNotFoundError:
         print("File not found!")
