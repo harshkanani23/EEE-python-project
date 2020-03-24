@@ -1,4 +1,4 @@
-# Read.md will be written later! 
+# README.md will be written later! 
 
 # 1. Restructured Code
 # 2. Added UtilityCore.py as Utility function
