@@ -1,6 +1,7 @@
 # Importing required modules.
 from os import system
 from traceback import print_exc
+
 try:
   from UtilityCore import getData, printDataFrame, writeToFile, createWorkbook
 except ModuleNotFoundError:
@@ -18,7 +19,6 @@ def start():
   # Create a workbook to work with.
   try:
     wb = createWorkbook()
-    
     # Add sheet to Workbook.
     sheet1 = wb.add_sheet('Sheet 1')
     
@@ -27,7 +27,7 @@ def start():
     print("\nEnter the name of project from [HOME], [COMMERCIAL], [SCHOOL], [COLLEGE], [SHOPPING MALL]")
 
     project = input("\nEnter the name of project: ").lower()
-    state = input('\nEnter the name of state: ').lower()
+    state = input('Enter the name of state: ').lower()
 
     if project == 'home':
       bed = input("Enter the total number of BHK: ")
@@ -38,8 +38,7 @@ def start():
     if project == 'college':
       class_room1 = input("Enter the total number of classrooms: ") 
     if project == 'Shopping Mall':
-      shops = input('Enter the total number of shops: ')
-
+      shops = input("Enter the total number of shops: ")
 
     # Total number os devices
     total_devices = input("Enter Total Number of Devices you want to add: ")
@@ -63,13 +62,12 @@ def start():
     for i in range(int(total_devices)):
       _name = input("Enter the name of device: ")
       device_name = sheet1.write(i+1, 0, _name )
-      _name = input("Enter the name of brand: ")
-      brand = sheet1.write(i+1, 1, _name )
-      l = brandsdevices['devices']
-      if _name in l and _name in brandsdevices[_name]:
+      b_name = input("Enter the name of brand: ")
+      brand = sheet1.write(i+1, 1, b_name )
+      if _name in brandsdevices['devices'] and b_name in brandsdevices[_name]:
         v = _name + '_vol'
         current = _name + '_crr'
-        index = brandsdevices[_name].index(_name)
+        index = brandsdevices[_name].index(b_name)
         V = brandsdevices[v][index]
         I = brandsdevices[current][index]
       else:
@@ -88,14 +86,13 @@ def start():
       total_units = sheet1.write(i+1, 7, units)
       bill = units * float(str(state_units[state]))
       total_bill = sheet1.write(i+1, 8, bill)
-      li = brandsdevices[v]
-      v1 = li.index(min(li))
-      sheet1.write(i+1, 9, brandsdevices[_name][v1])
+      #li = brandsdevices[v]
+      #v1 = li.index(min(li))
+      #sheet1.write(i+1, 9, brandsdevices[_name][v1])
 
 
     # Saving data in excel
     writeToFile(wb, filename)
-    #wb.save('xlwt ')
 
     # Print data in python emulator.
     printDataFrame(filename)
@@ -104,5 +101,3 @@ def start():
 
 system('cls')
 start()
-
-
