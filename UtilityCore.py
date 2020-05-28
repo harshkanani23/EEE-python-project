@@ -2,6 +2,7 @@ from traceback import print_exc
 # Returns a dictinary of data of devices and brands.
 # Note: Data is tentative for project purpose.
 
+
 def getData(filename):
     try:
         # Import relevant modules.
@@ -12,9 +13,10 @@ def getData(filename):
         return data
     except FileNotFoundError:
         print("File not found!")
-    except :
+    except:
         print("Unable to load data!")
         print_exc()
+
 
 def printDataFrame(filename):
     try:
@@ -25,11 +27,12 @@ def printDataFrame(filename):
     except ModuleNotFoundError:
         print("Pandas not  Installed!")
     except FileNotFoundError:
-        print("File doesn't exist! \nCreate file first!") 
+        print("File doesn't exist! \nCreate file first!")
     except:
         print_exc()
     finally:
-        print("Unable to print data from Excel file.")       
+        print("Unable to print data from Excel file.")
+
 
 def writeToFile(wb, filename):
     try:
@@ -42,6 +45,7 @@ def writeToFile(wb, filename):
         print_exc()
     finally:
         print("Unable to save!")
+
 
 def createWorkbook():
     try:
