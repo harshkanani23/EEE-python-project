@@ -4,4 +4,4 @@
 
 Find out the total electricily bill. 
 
-This just a test program. Built in python, with xlwt, pandas and hark work.
+This just a test program. Built in python, with xlwt, pandas and hard work.
