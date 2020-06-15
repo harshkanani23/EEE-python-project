@@ -3,7 +3,7 @@ from traceback import print_exc
 # Note: Data is tentative for project purpose.
 
 
-def getData(filename) -> dict:
+def getData(filename):
     try:
         # Import relevant modules.
         from json import load

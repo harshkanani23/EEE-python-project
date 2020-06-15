@@ -1,7 +1,10 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/harshkanani014/Electricity-Bill-Assumption)
+# README.md will be written later!
 
-# Electricity Bill Assumption
+## TODO
 
-Find out the total electricily bill. 
+1.  Restructured Code
+2.  Added UtilityCore.py as Utility function
+3.  Renamed code.py to ElectricityBillMain.py
+4.  Created BrandDevices.json, StateUnits.json to store data.
 
-This just a test program. Built in python, with xlwt, pandas and hark work.
+# Please rerun and check!

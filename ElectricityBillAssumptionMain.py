@@ -8,11 +8,11 @@ except ModuleNotFoundError:
     print("UtilityCore.py not found!")
 
 # File where data will be stored.
-filename = 'Data/ElectricityBill.xls'
+filename = 'ElectricityBill.xls'
 
 # Import relevant data from .json files.
-brandsdevices = getData('Data/BrandDevices.json')
-state_units = getData('Data/StateUnits.json')
+brandsdevices = getData('BrandDevices.json')
+state_units = getData('StateUnits.json')
 
 
 def start():
@@ -99,6 +99,5 @@ def start():
         printDataFrame(filename)
     except:
         print_exc()
-
 
 start()
